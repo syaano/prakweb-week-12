@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        h2{
+            text-align: center;
+            color: rgb(152, 92, 146);
+        }
+    </style>
+</head>
+<body>
+    <h2>Rekomendasi Sunscreen Untuk Kulit Berminyak</h2>
+    <br>
+    <br>
+    <label for="gambar">Sunscreen:</label>
+    <select id="gambar" onchange="image()">
+        <option id="img1">Azarine</option>
+        <option id="img2">Facetology</option>
+        <option id="img3">Npure</option>
+        <option id="img4">Skin Aqua</option>
+        <option id="img5">Skintifict</option>
+    </select>
+    <br>
+    <img id="gambarpilih" width="400" style="margin-top: 20px;"/>
+    <script>
+        function image() {
+            let pilih = document.getElementById("gambar").value;
+            let gambarpilih = document.getElementById("gambarpilih");
+    
+            if (pilih == "Azarine") {
+                gambarpilih.src = "img/foto 1.jpeg";
+                alert("Sunscreen Azarine");
+            } else if (pilih == "Facetology") {
+                gambarpilih.src = "img/foto 2.jpeg";
+                alert("Sunscreen Facetology");
+            } else if (pilih == "Npure") {
+                gambarpilih.src = "img/foto 3.jpeg";
+                alert("Sunscreen Npure");
+            } else if (pilih == "Skin Aqua") {
+                gambarpilih.src = "img/foto 4.jpeg";
+                alert("Sunscreen Skin Aqua");
+            } else if (pilih == "Skintifict") {
+                gambarpilih.src = "img/foto 5.jpeg";
+                alert("Sunscreen kintifict");
+            }
+        }
+    </script>
+</body>
+</html>
